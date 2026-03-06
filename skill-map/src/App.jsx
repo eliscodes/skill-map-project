@@ -674,7 +674,6 @@ export default function SkillMap() {
   const [dark, setDark] = useState(true);
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [selectedSkill, setSelectedSkill] = useState(null);
-  const [dark, setDark] = useState(true);
   const { ratings, growthInterest, setRating, toggleGrowth, busFactorRisks, mentoringPairs, skillCoverage } = useSkillMap();
 
   const navItems = [
@@ -739,16 +738,12 @@ export default function SkillMap() {
             <span style={{ color: "#60a5fa", fontSize: 12, fontFamily: "'DM Mono', monospace", fontWeight: 600 }}>{skillCoverage}%</span>
             <span style={{ color: "#6b7a99", fontSize: 12 }}>Coverage</span>
           </div>
-          <span style={{ color: "#6b7a99", fontSize: 12 }}>Coverage</span>
-          </div>
           <button onClick={() => setDark(d => !d)} style={{
             padding: "4px 12px", borderRadius: 20, border: "1px solid #2d3348",
             background: "transparent", color: "#6b7a99", cursor: "pointer", fontSize: 12,
           }}>
             {dark ? "☀️ Light" : "🌙 Dark"}
           </button>
-        </div>
-      </header>
         </div>
       </header>
 
