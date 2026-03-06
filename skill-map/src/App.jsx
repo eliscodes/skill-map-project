@@ -34,59 +34,77 @@ const SKILLS = [
 ];
 
 const TEAM = [
-  { id: "person1", name: "Adam", role: "Frontend Engineer", avatar: "AA" },
-  { id: "person2", name: "Bob", role: "Backend Engineer", avatar: "BB" },
-  { id: "person3", name: "Chris", role: "Backend Engineer", avatar: "CC" },
-  { id: "person3", name: "Dave", role: "Full Stack", avatar: "DD" },
-  { id: "person4", name: "Ema", role: "Backend Engineer", avatar: "EE" },
-  { id: "person5", name: "Felix", role: "QA Engineer", avatar: "FF" },
-  { id: "person6", name: "Greg", role: "Frontend Engineer", avatar: "GG" },
-  { id: "person7", name: "Holly", role: "Frontend ENgineer", avatar: "HH" },
-  { id: "person8", name: "Iris", role: "Backend Engineer", avatar: "II" },
-  { id: "person9", name: "Jay", role: "Consultant", avatar: "JJ" },
-  { id: "person10", name: "Kev", role: "Teamlead", avatar: "KK" },
-  { id: "person11", name: "Leo", role: "PM", avatar: "LL" },
-  { id: "person12", name: "Mona", role: "PM", avatar: "MM" },
-  { id: "person13", name: "Nina", role: "PM", avatar: "NN" },
+  { id: "person1",  name: "Adam",  role: "Frontend Engineer",  avatar: "AA" },
+  { id: "person2",  name: "Bob",   role: "Backend Engineer",   avatar: "BB" },
+  { id: "person3",  name: "Chris", role: "Backend Engineer",   avatar: "CC" },
+  { id: "person4",  name: "Dave",  role: "Full Stack",         avatar: "DD" },
+  { id: "person5",  name: "Ema",   role: "Backend Engineer",   avatar: "EE" },
+  { id: "person6",  name: "Felix", role: "QA Engineer",        avatar: "FF" },
+  { id: "person7",  name: "Greg",  role: "Frontend Engineer",  avatar: "GG" },
+  { id: "person8",  name: "Holly", role: "Frontend Engineer",  avatar: "HH" },
+  { id: "person9",  name: "Iris",  role: "Backend Engineer",   avatar: "II" },
+  { id: "person10", name: "Jay",   role: "Consultant",         avatar: "JJ" },
+  { id: "person11", name: "Kev",   role: "Teamlead",           avatar: "KK" },
+  { id: "person12", name: "Leo",   role: "PM",                 avatar: "LL" },
+  { id: "person13", name: "Mona",  role: "PM",                 avatar: "MM" },
+  { id: "person14", name: "Nina",  role: "PM",                 avatar: "NN" },
 ];
 
 const INITIAL_RATINGS = {
-  person1: { react: "coach", typescript: "coach", css: "coach", nodejs: "independent", postgres: "learning", graphql: "independent", docker: "learning", k8s: "none", cicd: "learning", testing: "independent", security: "learning", architecture: "independent", mentoring: "coach" },
-  person2: { react: "learning", typescript: "independent", css: "learning", nodejs: "coach", postgres: "coach", graphql: "coach", docker: "independent", k8s: "learning", cicd: "independent", testing: "independent", security: "independent", architecture: "independent", mentoring: "independent" },
-  person3: { react: "independent", typescript: "independent", css: "independent", nodejs: "independent", postgres: "independent", graphql: "learning", docker: "independent", k8s: "none", cicd: "independent", testing: "coach", security: "learning", architecture: "learning", mentoring: "learning" },
-  person4: { react: "none", typescript: "learning", css: "none", nodejs: "independent", postgres: "independent", graphql: "none", docker: "coach", k8s: "coach", cicd: "coach", testing: "independent", security: "coach", architecture: "independent", mentoring: "independent" },
-  person5: { react: "learning", typescript: "independent", css: "learning", nodejs: "learning", postgres: "independent", graphql: "none", docker: "learning", k8s: "none", cicd: "independent", testing: "coach", security: "independent", architecture: "none", mentoring: "learning" },
-  person6: { react: "independent", typescript: "learning", css: "independent", nodejs: "none", postgres: "none", graphql: "none", docker: "learning", k8s: "none", cicd: "none", testing: "learning", security: "none", architecture: "none", mentoring: "none" },
-  person7: { react: "coach", typescript: "coach", css: "coach", nodejs: "independent", postgres: "learning", graphql: "independent", docker: "learning", k8s: "none", cicd: "learning", testing: "independent", security: "learning", architecture: "independent", mentoring: "coach" },
-  person8: { react: "learning", typescript: "independent", css: "learning", nodejs: "coach", postgres: "coach", graphql: "coach", docker: "independent", k8s: "learning", cicd: "independent", testing: "independent", security: "independent", architecture: "independent", mentoring: "independent" },
-  person9: { react: "independent", typescript: "independent", css: "independent", nodejs: "independent", postgres: "independent", graphql: "learning", docker: "independent", k8s: "none", cicd: "independent", testing: "coach", security: "learning", architecture: "learning", mentoring: "learning" },
-  person10: { react: "none", typescript: "learning", css: "none", nodejs: "independent", postgres: "independent", graphql: "none", docker: "coach", k8s: "coach", cicd: "coach", testing: "independent", security: "coach", architecture: "independent", mentoring: "independent" },
-  person11: { react: "learning", typescript: "independent", css: "learning", nodejs: "learning", postgres: "independent", graphql: "none", docker: "learning", k8s: "none", cicd: "independent", testing: "coach", security: "independent", architecture: "none", mentoring: "learning" },
-  person12: { react: "independent", typescript: "learning", css: "independent", nodejs: "none", postgres: "none", graphql: "none", docker: "learning", k8s: "none", cicd: "none", testing: "learning", security: "none", architecture: "none", mentoring: "none" },
-  person13: { react: "learning", typescript: "independent", css: "learning", nodejs: "learning", postgres: "independent", graphql: "none", docker: "learning", k8s: "none", cicd: "independent", testing: "coach", security: "independent", architecture: "none", mentoring: "learning" },
-  person14: { react: "independent", typescript: "learning", css: "independent", nodejs: "none", postgres: "none", graphql: "none", docker: "learning", k8s: "none", cicd: "none", testing: "learning", security: "none", architecture: "none", mentoring: "none" },
+  person1:  { react: "coach",       typescript: "coach",       css: "coach",        nodejs: "independent", postgres: "learning",     graphql: "independent", docker: "learning",     pim: "none",        cicd: "learning",     testing: "independent", security: "learning",     architecture: "independent", mentoring: "coach"       },
+  person2:  { react: "learning",    typescript: "independent", css: "learning",     nodejs: "coach",       postgres: "coach",        graphql: "coach",       docker: "independent",  pim: "learning",    cicd: "independent",  testing: "independent", security: "independent",  architecture: "independent", mentoring: "independent" },
+  person3:  { react: "independent", typescript: "independent", css: "independent",  nodejs: "independent", postgres: "independent",  graphql: "learning",    docker: "independent",  pim: "none",        cicd: "independent",  testing: "coach",       security: "learning",     architecture: "learning",    mentoring: "learning"    },
+  person4:  { react: "none",        typescript: "learning",    css: "none",         nodejs: "independent", postgres: "independent",  graphql: "none",        docker: "coach",        pim: "coach",       cicd: "coach",        testing: "independent", security: "coach",        architecture: "independent", mentoring: "independent" },
+  person5:  { react: "learning",    typescript: "independent", css: "learning",     nodejs: "learning",    postgres: "independent",  graphql: "none",        docker: "learning",     pim: "none",        cicd: "independent",  testing: "coach",       security: "independent",  architecture: "none",        mentoring: "learning"    },
+  person6:  { react: "independent", typescript: "learning",    css: "independent",  nodejs: "none",        postgres: "none",         graphql: "none",        docker: "learning",     pim: "none",        cicd: "none",         testing: "learning",    security: "none",         architecture: "none",        mentoring: "none"        },
+  person7:  { react: "coach",       typescript: "coach",       css: "coach",        nodejs: "independent", postgres: "learning",     graphql: "independent", docker: "learning",     pim: "none",        cicd: "learning",     testing: "independent", security: "learning",     architecture: "independent", mentoring: "coach"       },
+  person8:  { react: "learning",    typescript: "independent", css: "learning",     nodejs: "coach",       postgres: "coach",        graphql: "coach",       docker: "independent",  pim: "learning",    cicd: "independent",  testing: "independent", security: "independent",  architecture: "independent", mentoring: "independent" },
+  person9:  { react: "independent", typescript: "independent", css: "independent",  nodejs: "independent", postgres: "independent",  graphql: "learning",    docker: "independent",  pim: "none",        cicd: "independent",  testing: "coach",       security: "learning",     architecture: "learning",    mentoring: "learning"    },
+  person10: { react: "none",        typescript: "learning",    css: "none",         nodejs: "independent", postgres: "independent",  graphql: "none",        docker: "coach",        pim: "coach",       cicd: "coach",        testing: "independent", security: "coach",        architecture: "independent", mentoring: "independent" },
+  person11: { react: "learning",    typescript: "independent", css: "learning",     nodejs: "learning",    postgres: "independent",  graphql: "none",        docker: "learning",     pim: "none",        cicd: "independent",  testing: "coach",       security: "independent",  architecture: "none",        mentoring: "learning"    },
+  person12: { react: "independent", typescript: "learning",    css: "independent",  nodejs: "none",        postgres: "none",         graphql: "none",        docker: "learning",     pim: "none",        cicd: "none",         testing: "learning",    security: "none",         architecture: "none",        mentoring: "none"        },
+  person13: { react: "learning",    typescript: "independent", css: "learning",     nodejs: "learning",    postgres: "independent",  graphql: "none",        docker: "learning",     pim: "none",        cicd: "independent",  testing: "coach",       security: "independent",  architecture: "none",        mentoring: "learning"    },
+  person14: { react: "independent", typescript: "learning",    css: "independent",  nodejs: "none",        postgres: "none",         graphql: "none",        docker: "learning",     pim: "none",        cicd: "none",         testing: "learning",    security: "none",         architecture: "none",        mentoring: "none"        },
 };
 
 const INITIAL_GROWTH = {
-  adam: ["k8s", "security"],
-  bob: ["react", "architecture"],
-  chris: ["graphql", "architecture"],
-  dave: ["react", "graphql"],
-  ema: ["react", "docker"],
-  felix: ["react", "architecture"],
-  greg: ["graphql", "architecture"],
-  holly: ["react", "graphql"],
-  iris: ["react", "docker"],
-  jay: ["nodejs", "testing", "typescript"],
-  kev: ["react", "architecture"],
-  leo: ["graphql", "architecture"],
-  mona: ["react", "graphql"],
-  nina: ["react", "docker"],
+  person1:  ["pim", "security"],
+  person2:  ["react", "architecture"],
+  person3:  ["graphql", "architecture"],
+  person4:  ["react", "graphql"],
+  person5:  ["react", "docker"],
+  person6:  ["react", "architecture"],
+  person7:  ["graphql", "architecture"],
+  person8:  ["react", "graphql"],
+  person9:  ["react", "docker"],
+  person10: ["nodejs", "testing", "typescript"],
+  person11: ["react", "architecture"],
+  person12: ["graphql", "architecture"],
+  person13: ["react", "graphql"],
+  person14: ["react", "docker"],
 };
 
 // ─── HOOKS ─────────────────────────────────────────────────────────────────────
 
-function useSkillMap() {
+function useToast() {
+  const [toast, setToast] = useState(null);
+  const show = (msg) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3000);
+  };
+  const ToastEl = toast ? (
+    <div style={{
+      position: "fixed", bottom: 24, right: 24, zIndex: 9999,
+      background: "#13161e", border: "1px solid #22c55e",
+      borderRadius: 12, padding: "12px 20px", color: "#f0f4ff",
+      fontSize: 13, fontWeight: 600, boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
+      animation: "slideIn 0.2s ease",
+    }}>{toast}</div>
+  ) : null;
+  return { show, ToastEl };
+}
+
+function useSkillMap(showToast) {
   const [ratings, setRatings] = useState(() => {
     const saved = localStorage.getItem("skillmap-ratings");
     return saved ? JSON.parse(saved) : INITIAL_RATINGS;
@@ -99,6 +117,13 @@ function useSkillMap() {
 
   const setRating = (userId, skillId, level) => {
     setRatings(prev => {
+      const oldLevel = LEVELS[prev[userId]?.[skillId]]?.value || 0;
+      const newLevel = LEVELS[level]?.value || 0;
+      if (newLevel > oldLevel) {
+        const person = TEAM.find(p => p.id === userId);
+        const skill = SKILLS.find(s => s.id === skillId);
+        showToast(`${LEVELS[level].icon} ${person?.name} ist jetzt ${LEVELS[level].label} in ${skill?.name}!`);
+      }
       const next = { ...prev, [userId]: { ...prev[userId], [skillId]: level } };
       localStorage.setItem("skillmap-ratings", JSON.stringify(next));
       return next;
@@ -239,7 +264,7 @@ function CellEditor({ userId, skillId, currentLevel, isGrowth, onSetRating, onTo
   );
 }
 
-function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, growthInterest, onNavigate }) {
+function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, growthInterest }) {
   const totalCoaches = SKILLS.reduce((acc, skill) => {
     return acc + TEAM.filter(p => ratings[p.id]?.[skill.id] === "coach").length;
   }, 0);
@@ -268,14 +293,9 @@ function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, gro
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-      {/* Stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
         {statCards.map((card, i) => (
-          <div key={i} style={{
-            background: "#13161e", border: "1px solid #1e2438",
-            borderRadius: 14, padding: "20px 22px",
-            borderLeft: `3px solid ${card.color}`,
-          }}>
+          <div key={i} style={{ background: "#13161e", border: "1px solid #1e2438", borderRadius: 14, padding: "20px 22px", borderLeft: `3px solid ${card.color}` }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
               <div style={{ color: "#6b7a99", fontSize: 12, fontFamily: "'DM Mono', monospace", letterSpacing: 1 }}>{card.label.toUpperCase()}</div>
               <div style={{ fontSize: 18, opacity: 0.7 }}>{card.icon}</div>
@@ -287,7 +307,6 @@ function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, gro
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-        {/* Category Strengths */}
         <div style={{ background: "#13161e", border: "1px solid #1e2438", borderRadius: 14, padding: 22 }}>
           <div style={{ color: "#f0f4ff", fontWeight: 700, fontSize: 15, marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
             <span style={{ color: "#6b7a99" }}>◈</span> Skill Stärke nach Kategorie
@@ -311,7 +330,6 @@ function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, gro
           </div>
         </div>
 
-        {/* Bus Factor Risks */}
         <div style={{ background: "#13161e", border: "1px solid #1e2438", borderRadius: 14, padding: 22 }}>
           <div style={{ color: "#f0f4ff", fontWeight: 700, fontSize: 15, marginBottom: 4, display: "flex", alignItems: "center", gap: 8 }}>
             <span style={{ color: "#ef4444" }}>⚠</span> Bus Factor Risiken
@@ -325,11 +343,7 @@ function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, gro
                 const cat = CATEGORIES[skill.category];
                 const expert = TEAM.find(p => ["coach", "independent"].includes(ratings[p.id]?.[skill.id]));
                 return (
-                  <div key={skill.id} style={{
-                    display: "flex", alignItems: "center", justifyContent: "space-between",
-                    padding: "8px 12px", borderRadius: 8, background: "rgba(239,68,68,0.05)",
-                    border: "1px solid rgba(239,68,68,0.15)",
-                  }}>
+                  <div key={skill.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 12px", borderRadius: 8, background: "rgba(239,68,68,0.05)", border: "1px solid rgba(239,68,68,0.15)" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                       <div style={{ width: 6, height: 6, borderRadius: 2, background: cat.color }} />
                       <span style={{ color: "#c0cce8", fontSize: 13 }}>{skill.name}</span>
@@ -346,7 +360,6 @@ function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, gro
         </div>
       </div>
 
-      {/* Mentoring Matches */}
       <div style={{ background: "#13161e", border: "1px solid #1e2438", borderRadius: 14, padding: 22 }}>
         <div style={{ color: "#f0f4ff", fontWeight: 700, fontSize: 15, marginBottom: 4, display: "flex", alignItems: "center", gap: 8 }}>
           <span style={{ color: "#22c55e" }}>↔</span> Mentoring Matches
@@ -356,10 +369,7 @@ function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, gro
           {mentoringPairs.map((pair, i) => {
             const cat = CATEGORIES[pair.skill.category];
             return (
-              <div key={i} style={{
-                padding: "12px 14px", borderRadius: 10, background: "#0d1017",
-                border: "1px solid #1e2438",
-              }}>
+              <div key={i} style={{ padding: "12px 14px", borderRadius: 10, background: "#0d1017", border: "1px solid #1e2438" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 10 }}>
                   <div style={{ width: 6, height: 6, borderRadius: 2, background: cat.color }} />
                   <span style={{ color: cat.color, fontSize: 11, fontWeight: 600 }}>{pair.skill.name}</span>
@@ -372,8 +382,8 @@ function Dashboard({ ratings, busFactorRisks, mentoringPairs, skillCoverage, gro
                   <Avatar person={pair.learner} size={24} />
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>
-                  <span style={{ color: "#6b7a99", fontSize: 10 }}>{pair.coach.name.split(" ")[0]}</span>
-                  <span style={{ color: "#6b7a99", fontSize: 10 }}>{pair.learner.name.split(" ")[0]}</span>
+                  <span style={{ color: "#6b7a99", fontSize: 10 }}>{pair.coach.name}</span>
+                  <span style={{ color: "#6b7a99", fontSize: 10 }}>{pair.learner.name}</span>
                 </div>
               </div>
             );
@@ -389,40 +399,21 @@ function SkillMatrix({ ratings, growthInterest, setRating, toggleGrowth }) {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [hoveredCol, setHoveredCol] = useState(null);
   const [filter, setFilter] = useState("all");
-
   const filteredSkills = filter === "all" ? SKILLS : SKILLS.filter(s => s.category === filter);
 
   return (
     <div>
       {editing && (
-        <CellEditor
-          {...editing}
+        <CellEditor {...editing}
           isGrowth={growthInterest[editing.userId]?.includes(editing.skillId)}
-          onSetRating={setRating}
-          onToggleGrowth={toggleGrowth}
-          onClose={() => setEditing(null)}
-        />
+          onSetRating={setRating} onToggleGrowth={toggleGrowth} onClose={() => setEditing(null)} />
       )}
-
-      {/* Category filter */}
       <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
-        <button onClick={() => setFilter("all")} style={{
-          padding: "6px 14px", borderRadius: 8, border: "1px solid",
-          borderColor: filter === "all" ? "#3b82f6" : "#2d3348",
-          background: filter === "all" ? "rgba(59,130,246,0.1)" : "transparent",
-          color: filter === "all" ? "#60a5fa" : "#6b7a99", cursor: "pointer", fontSize: 12, fontWeight: 600,
-        }}>Alle Skills</button>
+        <button onClick={() => setFilter("all")} style={{ padding: "6px 14px", borderRadius: 8, border: "1px solid", borderColor: filter === "all" ? "#3b82f6" : "#2d3348", background: filter === "all" ? "rgba(59,130,246,0.1)" : "transparent", color: filter === "all" ? "#60a5fa" : "#6b7a99", cursor: "pointer", fontSize: 12, fontWeight: 600 }}>Alle Skills</button>
         {Object.entries(CATEGORIES).map(([id, cat]) => (
-          <button key={id} onClick={() => setFilter(id)} style={{
-            padding: "6px 14px", borderRadius: 8, border: "1px solid",
-            borderColor: filter === id ? cat.color : "#2d3348",
-            background: filter === id ? `${cat.color}18` : "transparent",
-            color: filter === id ? cat.color : "#6b7a99", cursor: "pointer", fontSize: 12, fontWeight: 600,
-          }}>{cat.label}</button>
+          <button key={id} onClick={() => setFilter(id)} style={{ padding: "6px 14px", borderRadius: 8, border: "1px solid", borderColor: filter === id ? cat.color : "#2d3348", background: filter === id ? `${cat.color}18` : "transparent", color: filter === id ? cat.color : "#6b7a99", cursor: "pointer", fontSize: 12, fontWeight: 600 }}>{cat.label}</button>
         ))}
       </div>
-
-      {/* Matrix */}
       <div style={{ overflowX: "auto" }}>
         <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 800 }}>
           <thead>
@@ -431,13 +422,7 @@ function SkillMatrix({ ratings, growthInterest, setRating, toggleGrowth }) {
               {filteredSkills.map(skill => {
                 const cat = CATEGORIES[skill.category];
                 return (
-                  <th key={skill.id} style={{
-                    padding: "8px 6px", textAlign: "center", fontSize: 11,
-                    color: hoveredCol === skill.id ? cat.color : "#4a5568",
-                    fontFamily: "'DM Mono', monospace", fontWeight: 500,
-                    borderBottom: hoveredCol === skill.id ? `2px solid ${cat.color}` : "2px solid transparent",
-                    transition: "all 0.15s", minWidth: 90,
-                  }}>
+                  <th key={skill.id} style={{ padding: "8px 6px", textAlign: "center", fontSize: 11, color: hoveredCol === skill.id ? cat.color : "#4a5568", fontFamily: "'DM Mono', monospace", fontWeight: 500, borderBottom: hoveredCol === skill.id ? `2px solid ${cat.color}` : "2px solid transparent", transition: "all 0.15s", minWidth: 90 }}>
                     <div style={{ display: "flex", flexDirection: "column", gap: 3, alignItems: "center" }}>
                       <div style={{ width: 4, height: 4, borderRadius: 1, background: cat.color, opacity: 0.7 }} />
                       {skill.name}
@@ -448,11 +433,8 @@ function SkillMatrix({ ratings, growthInterest, setRating, toggleGrowth }) {
             </tr>
           </thead>
           <tbody>
-            {TEAM.map((person, pi) => (
-              <tr key={person.id} onMouseEnter={() => setHoveredRow(person.id)} onMouseLeave={() => setHoveredRow(null)} style={{
-                background: hoveredRow === person.id ? "rgba(255,255,255,0.02)" : "transparent",
-                transition: "background 0.1s",
-              }}>
+            {TEAM.map((person) => (
+              <tr key={person.id} onMouseEnter={() => setHoveredRow(person.id)} onMouseLeave={() => setHoveredRow(null)} style={{ background: hoveredRow === person.id ? "rgba(255,255,255,0.02)" : "transparent", transition: "background 0.1s" }}>
                 <td style={{ padding: "10px 16px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <Avatar person={person} size={32} />
@@ -468,24 +450,10 @@ function SkillMatrix({ ratings, growthInterest, setRating, toggleGrowth }) {
                   const l = LEVELS[level];
                   const isHighlighted = hoveredRow === person.id || hoveredCol === skill.id;
                   return (
-                    <td key={skill.id} style={{ padding: "6px 4px", textAlign: "center" }}
-                      onMouseEnter={() => setHoveredCol(skill.id)}
-                      onMouseLeave={() => setHoveredCol(null)}>
-                      <div onClick={() => setEditing({ userId: person.id, skillId: skill.id, currentLevel: level })}
-                        style={{
-                          display: "inline-flex", alignItems: "center", justifyContent: "center",
-                          width: 72, height: 36, borderRadius: 8, cursor: "pointer",
-                          background: l.color,
-                          border: isGrowth ? "2px solid #22c55e" : `1px solid ${isHighlighted ? (l.border || "#3a4560") : "#1e2438"}`,
-                          transition: "all 0.15s", fontSize: 16,
-                          transform: isHighlighted && level !== "none" ? "scale(1.05)" : "scale(1)",
-                          position: "relative",
-                        }}>
+                    <td key={skill.id} style={{ padding: "6px 4px", textAlign: "center" }} onMouseEnter={() => setHoveredCol(skill.id)} onMouseLeave={() => setHoveredCol(null)}>
+                      <div onClick={() => setEditing({ userId: person.id, skillId: skill.id, currentLevel: level })} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 72, height: 36, borderRadius: 8, cursor: "pointer", background: l.color, border: isGrowth ? "2px solid #22c55e" : `1px solid ${isHighlighted ? (l.border || "#3a4560") : "#1e2438"}`, transition: "all 0.15s", fontSize: 16, transform: isHighlighted && level !== "none" ? "scale(1.05)" : "scale(1)", position: "relative" }}>
                         {level === "none" ? <span style={{ color: "#2a3050", fontSize: 18 }}>·</span> : <span>{l.icon}</span>}
-                        {isGrowth && <span style={{
-                          position: "absolute", top: -5, right: -5, width: 10, height: 10,
-                          background: "#22c55e", borderRadius: "50%", border: "1px solid #0d1017",
-                        }} />}
+                        {isGrowth && <span style={{ position: "absolute", top: -5, right: -5, width: 10, height: 10, background: "#22c55e", borderRadius: "50%", border: "1px solid #0d1017" }} />}
                       </div>
                     </td>
                   );
@@ -495,8 +463,6 @@ function SkillMatrix({ ratings, growthInterest, setRating, toggleGrowth }) {
           </tbody>
         </table>
       </div>
-
-      {/* Legend */}
       <div style={{ display: "flex", gap: 20, marginTop: 24, padding: "16px 20px", background: "#13161e", borderRadius: 10, border: "1px solid #1e2438", alignItems: "center", flexWrap: "wrap" }}>
         <span style={{ color: "#3a4560", fontSize: 12, fontFamily: "'DM Mono', monospace" }}>LEGENDE:</span>
         {Object.entries(LEVELS).filter(([k]) => k !== "none").map(([key, l]) => (
@@ -519,14 +485,12 @@ function PersonProfile({ person, ratings, growthInterest, toggleGrowth, setRatin
   const [editing, setEditing] = useState(null);
   const personRatings = ratings[person.id] || {};
   const personGrowth = growthInterest[person.id] || [];
-
   const byCategory = Object.entries(CATEGORIES).map(([catId, cat]) => ({
     ...cat, id: catId,
     skills: SKILLS.filter(s => s.category === catId).map(skill => ({
       ...skill, level: personRatings[skill.id] || "none", isGrowth: personGrowth.includes(skill.id),
     })),
   }));
-
   const coachCount = Object.values(personRatings).filter(l => l === "coach").length;
   const indCount = Object.values(personRatings).filter(l => l === "independent").length;
   const learnCount = Object.values(personRatings).filter(l => l === "learning").length;
@@ -534,8 +498,7 @@ function PersonProfile({ person, ratings, growthInterest, toggleGrowth, setRatin
   return (
     <div>
       {editing && (
-        <CellEditor {...editing}
-          isGrowth={growthInterest[editing.userId]?.includes(editing.skillId)}
+        <CellEditor {...editing} isGrowth={growthInterest[editing.userId]?.includes(editing.skillId)}
           onSetRating={setRating} onToggleGrowth={toggleGrowth} onClose={() => setEditing(null)} />
       )}
       <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 28, padding: "24px", background: "#13161e", borderRadius: 14, border: "1px solid #1e2438" }}>
@@ -553,7 +516,6 @@ function PersonProfile({ person, ratings, growthInterest, toggleGrowth, setRatin
           ))}
         </div>
       </div>
-
       <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 }}>
         {byCategory.map(cat => (
           <div key={cat.id} style={{ background: "#13161e", borderRadius: 14, border: "1px solid #1e2438", overflow: "hidden" }}>
@@ -584,7 +546,6 @@ function SkillDetail({ skill, ratings, growthInterest }) {
   const cat = CATEGORIES[skill.category];
   const people = TEAM.map(p => ({ ...p, level: ratings[p.id]?.[skill.id] || "none", isGrowth: growthInterest[p.id]?.includes(skill.id) }))
     .sort((a, b) => LEVELS[b.level].value - LEVELS[a.level].value);
-
   const dist = { coach: 0, independent: 0, learning: 0, none: 0 };
   people.forEach(p => dist[p.level]++);
   const coaches = people.filter(p => p.level === "coach");
@@ -611,7 +572,6 @@ function SkillDetail({ skill, ratings, growthInterest }) {
           })}
         </div>
       </div>
-
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
         <div style={{ background: "#13161e", borderRadius: 14, border: "1px solid #1e2438", padding: 20 }}>
           <div style={{ color: "#f0f4ff", fontWeight: 700, marginBottom: 16, display: "flex", alignItems: "center", gap: 8 }}>
@@ -632,7 +592,6 @@ function SkillDetail({ skill, ratings, growthInterest }) {
             ))}
           </div>
         </div>
-
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           {coaches.length > 0 && learners.length > 0 && (
             <div style={{ background: "#13161e", borderRadius: 14, border: "1px solid #1e2438", padding: 20 }}>
@@ -640,10 +599,7 @@ function SkillDetail({ skill, ratings, growthInterest }) {
               {coaches.map(coach => (
                 <div key={coach.id}>
                   {learners.map(learner => (
-                    <div key={learner.id} style={{
-                      display: "flex", alignItems: "center", gap: 8, padding: "10px 12px",
-                      background: "#0d1017", borderRadius: 8, marginBottom: 8,
-                    }}>
+                    <div key={learner.id} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 12px", background: "#0d1017", borderRadius: 8, marginBottom: 8 }}>
                       <Avatar person={coach} size={26} />
                       <span style={{ color: "#f59e0b", fontSize: 12 }}>⭐ coacht</span>
                       <div style={{ flex: 1, height: 1, background: "linear-gradient(to right, #f59e0b44, #22c55e44)" }} />
@@ -655,7 +611,6 @@ function SkillDetail({ skill, ratings, growthInterest }) {
               ))}
             </div>
           )}
-
           <div style={{ background: "#13161e", borderRadius: 14, border: "1px solid #1e2438", padding: 20 }}>
             <div style={{ color: "#f0f4ff", fontWeight: 700, marginBottom: 12, fontSize: 14 }}>Level Verteilung</div>
             {Object.entries(dist).filter(([k]) => k !== "none").map(([lvl, count]) => {
@@ -690,7 +645,8 @@ export default function SkillMap() {
   });
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [selectedSkill, setSelectedSkill] = useState(null);
-  const { ratings, growthInterest, setRating, toggleGrowth, busFactorRisks, mentoringPairs, skillCoverage } = useSkillMap();
+  const { show, ToastEl } = useToast();
+  const { ratings, growthInterest, setRating, toggleGrowth, busFactorRisks, mentoringPairs, skillCoverage } = useSkillMap(show);
 
   const navItems = [
     { id: "dashboard", label: "Dashboard", icon: "◈" },
@@ -700,12 +656,7 @@ export default function SkillMap() {
   ];
 
   return (
-    <div style={{
-      minHeight: "100vh", background: "#0a0c12", color: "#f0f4ff",
-      fontFamily: "'Syne', system-ui, sans-serif",
-      display: "flex", flexDirection: "column",
-      filter: dark ? "none" : "invert(1) hue-rotate(180deg)",
-    }}>
+    <div style={{ minHeight: "100vh", background: "#0a0c12", color: "#f0f4ff", fontFamily: "'Syne', system-ui, sans-serif", display: "flex", flexDirection: "column", filter: dark ? "none" : "invert(1) hue-rotate(180deg)" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap');
         * { box-sizing: border-box; }
@@ -713,36 +664,21 @@ export default function SkillMap() {
         ::-webkit-scrollbar-track { background: #0a0c12; }
         ::-webkit-scrollbar-thumb { background: #2d3348; border-radius: 3px; }
         button { font-family: 'Syne', system-ui, sans-serif; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
       `}</style>
 
-      {/* Header */}
-      <header style={{
-        padding: "0 32px", height: 56, display: "flex", alignItems: "center",
-        borderBottom: "1px solid #13161e", background: "#0a0c12",
-        position: "sticky", top: 0, zIndex: 100,
-      }}>
+      <header style={{ padding: "0 32px", height: 56, display: "flex", alignItems: "center", borderBottom: "1px solid #13161e", background: "#0a0c12", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginRight: 40 }}>
-          <div style={{
-            width: 28, height: 28, borderRadius: 7, background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
-            display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14,
-          }}>◈</div>
+          <div style={{ width: 28, height: 28, borderRadius: 7, background: "linear-gradient(135deg, #3b82f6, #8b5cf6)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14 }}>◈</div>
           <span style={{ fontWeight: 800, fontSize: 16, letterSpacing: -0.5 }}>Skill<span style={{ color: "#3b82f6" }}>Map</span></span>
         </div>
-
         <nav style={{ display: "flex", gap: 2, flex: 1 }}>
           {navItems.map(item => (
-            <button key={item.id} onClick={() => { setView(item.id); setSelectedPerson(null); setSelectedSkill(null); }} style={{
-              padding: "6px 16px", borderRadius: 8, border: "none", cursor: "pointer",
-              background: view === item.id ? "#13161e" : "transparent",
-              color: view === item.id ? "#f0f4ff" : "#6b7a99",
-              fontSize: 13, fontWeight: view === item.id ? 600 : 400,
-              display: "flex", alignItems: "center", gap: 6, transition: "all 0.15s",
-            }}>
+            <button key={item.id} onClick={() => { setView(item.id); setSelectedPerson(null); setSelectedSkill(null); }} style={{ padding: "6px 16px", borderRadius: 8, border: "none", cursor: "pointer", background: view === item.id ? "#13161e" : "transparent", color: view === item.id ? "#f0f4ff" : "#6b7a99", fontSize: 13, fontWeight: view === item.id ? 600 : 400, display: "flex", alignItems: "center", gap: 6, transition: "all 0.15s" }}>
               <span style={{ fontSize: 11, opacity: 0.7 }}>{item.icon}</span> {item.label}
             </button>
           ))}
         </nav>
-
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           {busFactorRisks.length > 0 && (
             <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: 20 }}>
@@ -754,20 +690,15 @@ export default function SkillMap() {
             <span style={{ color: "#60a5fa", fontSize: 12, fontFamily: "'DM Mono', monospace", fontWeight: 600 }}>{skillCoverage}%</span>
             <span style={{ color: "#6b7a99", fontSize: 12 }}>Coverage</span>
           </div>
-          <button onClick={() => setDark(d => { const next = !d; localStorage.setItem("skillmap-dark", JSON.stringify(next)); return next; })} style={{
-            padding: "4px 12px", borderRadius: 20, border: "1px solid #2d3348",
-            background: "transparent", color: "#6b7a99", cursor: "pointer", fontSize: 12,
-          }}>
+          <button onClick={() => setDark(d => { const next = !d; localStorage.setItem("skillmap-dark", JSON.stringify(next)); return next; })} style={{ padding: "4px 12px", borderRadius: 20, border: "1px solid #2d3348", background: "transparent", color: "#6b7a99", cursor: "pointer", fontSize: 12 }}>
             {dark ? "☀️ Light" : "🌙 Dark"}
           </button>
         </div>
       </header>
 
-      {/* Main */}
       <main style={{ flex: 1, padding: "32px", maxWidth: 1400, width: "100%", margin: "0 auto" }}>
-        {/* Breadcrumb */}
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 24, color: "#3a4560", fontSize: 12, fontFamily: "'DM Mono', monospace" }}>
-          <span onClick={() => { setSelectedPerson(null); setSelectedSkill(null); }} style={{ cursor: view !== "dashboard" ? "pointer" : "default", transition: "color 0.1s" }}
+          <span onClick={() => { setSelectedPerson(null); setSelectedSkill(null); }} style={{ cursor: view !== "dashboard" ? "pointer" : "default" }}
             onMouseEnter={e => e.target.style.color = "#6b7a99"} onMouseLeave={e => e.target.style.color = "#3a4560"}>
             {navItems.find(n => n.id === view)?.label}
           </span>
@@ -775,14 +706,9 @@ export default function SkillMap() {
           {selectedSkill && <><span>/</span><span style={{ color: "#c0cce8" }}>{selectedSkill.name}</span></>}
         </div>
 
-        {view === "dashboard" && (
-          <Dashboard ratings={ratings} busFactorRisks={busFactorRisks} mentoringPairs={mentoringPairs}
-            skillCoverage={skillCoverage} growthInterest={growthInterest} onNavigate={setView} />
-        )}
+        {view === "dashboard" && <Dashboard ratings={ratings} busFactorRisks={busFactorRisks} mentoringPairs={mentoringPairs} skillCoverage={skillCoverage} growthInterest={growthInterest} />}
 
-        {view === "matrix" && (
-          <SkillMatrix ratings={ratings} growthInterest={growthInterest} setRating={setRating} toggleGrowth={toggleGrowth} />
-        )}
+        {view === "matrix" && <SkillMatrix ratings={ratings} growthInterest={growthInterest} setRating={setRating} toggleGrowth={toggleGrowth} />}
 
         {view === "team" && !selectedPerson && (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
@@ -793,10 +719,8 @@ export default function SkillMap() {
               const growthCount = (growthInterest[person.id] || []).length;
               const strength = ((coachCount * 3 + indCount * 2) / (SKILLS.length * 3)) * 100;
               return (
-                <div key={person.id} onClick={() => setSelectedPerson(person)} style={{
-                  background: "#13161e", border: "1px solid #1e2438", borderRadius: 14,
-                  padding: 20, cursor: "pointer", transition: "all 0.2s",
-                }} onMouseEnter={e => { e.currentTarget.style.borderColor = "#3b82f6"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                <div key={person.id} onClick={() => setSelectedPerson(person)} style={{ background: "#13161e", border: "1px solid #1e2438", borderRadius: 14, padding: 20, cursor: "pointer", transition: "all 0.2s" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = "#3b82f6"; e.currentTarget.style.transform = "translateY(-2px)"; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = "#1e2438"; e.currentTarget.style.transform = "translateY(0)"; }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
                     <Avatar person={person} size={44} />
@@ -819,10 +743,7 @@ export default function SkillMap() {
           </div>
         )}
 
-        {view === "team" && selectedPerson && (
-          <PersonProfile person={selectedPerson} ratings={ratings} growthInterest={growthInterest}
-            toggleGrowth={toggleGrowth} setRating={setRating} />
-        )}
+        {view === "team" && selectedPerson && <PersonProfile person={selectedPerson} ratings={ratings} growthInterest={growthInterest} toggleGrowth={toggleGrowth} setRating={setRating} />}
 
         {view === "skills" && !selectedSkill && (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
@@ -837,11 +758,8 @@ export default function SkillMap() {
                   const inds = TEAM.filter(p => ratings[p.id]?.[skill.id] === "independent").length;
                   const isRisk = coaches + inds <= 1;
                   return (
-                    <div key={skill.id} onClick={() => setSelectedSkill(skill)} style={{
-                      background: "#13161e", border: `1px solid ${isRisk ? "rgba(239,68,68,0.3)" : "#1e2438"}`,
-                      borderRadius: 10, padding: "12px 16px", marginBottom: 8, cursor: "pointer",
-                      transition: "all 0.15s",
-                    }} onMouseEnter={e => { e.currentTarget.style.borderColor = cat.color; }}
+                    <div key={skill.id} onClick={() => setSelectedSkill(skill)} style={{ background: "#13161e", border: `1px solid ${isRisk ? "rgba(239,68,68,0.3)" : "#1e2438"}`, borderRadius: 10, padding: "12px 16px", marginBottom: 8, cursor: "pointer", transition: "all 0.15s" }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = cat.color; }}
                       onMouseLeave={e => { e.currentTarget.style.borderColor = isRisk ? "rgba(239,68,68,0.3)" : "#1e2438"; }}>
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                         <span style={{ color: "#c0cce8", fontWeight: 600, fontSize: 14 }}>{skill.name}</span>
@@ -859,10 +777,10 @@ export default function SkillMap() {
           </div>
         )}
 
-        {view === "skills" && selectedSkill && (
-          <SkillDetail skill={selectedSkill} ratings={ratings} growthInterest={growthInterest} />
-        )}
+        {view === "skills" && selectedSkill && <SkillDetail skill={selectedSkill} ratings={ratings} growthInterest={growthInterest} />}
       </main>
+
+      {ToastEl}
     </div>
   );
 }
