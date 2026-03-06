@@ -671,7 +671,10 @@ function SkillDetail({ skill, ratings, growthInterest }) {
 
 export default function SkillMap() {
   const [view, setView] = useState("dashboard");
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(() => {
+    const saved = localStorage.getItem("skillmap-dark");
+    return saved !== null ? JSON.parse(saved) : true;
+  });
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [selectedSkill, setSelectedSkill] = useState(null);
   const { ratings, growthInterest, setRating, toggleGrowth, busFactorRisks, mentoringPairs, skillCoverage } = useSkillMap();
@@ -738,7 +741,7 @@ export default function SkillMap() {
             <span style={{ color: "#60a5fa", fontSize: 12, fontFamily: "'DM Mono', monospace", fontWeight: 600 }}>{skillCoverage}%</span>
             <span style={{ color: "#6b7a99", fontSize: 12 }}>Coverage</span>
           </div>
-          <button onClick={() => setDark(d => !d)} style={{
+          <button onClick={() => setDark(d => { const next = !d; localStorage.setItem("skillmap-dark", JSON.stringify(next)); return next; })} style={{
             padding: "4px 12px", borderRadius: 20, border: "1px solid #2d3348",
             background: "transparent", color: "#6b7a99", cursor: "pointer", fontSize: 12,
           }}>
