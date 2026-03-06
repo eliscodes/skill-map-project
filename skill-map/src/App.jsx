@@ -671,8 +671,10 @@ function SkillDetail({ skill, ratings, growthInterest }) {
 
 export default function SkillMap() {
   const [view, setView] = useState("dashboard");
+  const [dark, setDark] = useState(true);
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [selectedSkill, setSelectedSkill] = useState(null);
+  const [dark, setDark] = useState(true);
   const { ratings, growthInterest, setRating, toggleGrowth, busFactorRisks, mentoringPairs, skillCoverage } = useSkillMap();
 
   const navItems = [
@@ -687,6 +689,7 @@ export default function SkillMap() {
       minHeight: "100vh", background: "#0a0c12", color: "#f0f4ff",
       fontFamily: "'Syne', system-ui, sans-serif",
       display: "flex", flexDirection: "column",
+      filter: dark ? "none" : "invert(1) hue-rotate(180deg)",
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap');
@@ -736,6 +739,16 @@ export default function SkillMap() {
             <span style={{ color: "#60a5fa", fontSize: 12, fontFamily: "'DM Mono', monospace", fontWeight: 600 }}>{skillCoverage}%</span>
             <span style={{ color: "#6b7a99", fontSize: 12 }}>Coverage</span>
           </div>
+          <span style={{ color: "#6b7a99", fontSize: 12 }}>Coverage</span>
+          </div>
+          <button onClick={() => setDark(d => !d)} style={{
+            padding: "4px 12px", borderRadius: 20, border: "1px solid #2d3348",
+            background: "transparent", color: "#6b7a99", cursor: "pointer", fontSize: 12,
+          }}>
+            {dark ? "☀️ Light" : "🌙 Dark"}
+          </button>
+        </div>
+      </header>
         </div>
       </header>
 
