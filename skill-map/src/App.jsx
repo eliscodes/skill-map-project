@@ -87,17 +87,30 @@ const INITIAL_GROWTH = {
 // ─── HOOKS ─────────────────────────────────────────────────────────────────────
 
 function useSkillMap() {
-  const [ratings, setRatings] = useState(INITIAL_RATINGS);
-  const [growthInterest, setGrowthInterest] = useState(INITIAL_GROWTH);
+  const [ratings, setRatings] = useState(() => {
+    const saved = localStorage.getItem("skillmap-ratings");
+    return saved ? JSON.parse(saved) : INITIAL_RATINGS;
+  });
+
+  const [growthInterest, setGrowthInterest] = useState(() => {
+    const saved = localStorage.getItem("skillmap-growth");
+    return saved ? JSON.parse(saved) : INITIAL_GROWTH;
+  });
 
   const setRating = (userId, skillId, level) => {
-    setRatings(prev => ({ ...prev, [userId]: { ...prev[userId], [skillId]: level } }));
+    setRatings(prev => {
+      const next = { ...prev, [userId]: { ...prev[userId], [skillId]: level } };
+      localStorage.setItem("skillmap-ratings", JSON.stringify(next));
+      return next;
+    });
   };
 
   const toggleGrowth = (userId, skillId) => {
     setGrowthInterest(prev => {
       const curr = prev[userId] || [];
-      return { ...prev, [userId]: curr.includes(skillId) ? curr.filter(s => s !== skillId) : [...curr, skillId] };
+      const next = { ...prev, [userId]: curr.includes(skillId) ? curr.filter(s => s !== skillId) : [...curr, skillId] };
+      localStorage.setItem("skillmap-growth", JSON.stringify(next));
+      return next;
     });
   };
 
