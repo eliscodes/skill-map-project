@@ -25,7 +25,7 @@ const SKILLS = [
   { id: "postgres", name: "PostgreSQL", category: "backend" },
   { id: "graphql", name: "GraphQL", category: "backend" },
   { id: "docker", name: "Docker", category: "infrastructure" },
-  { id: "k8s", name: "Kubernetes", category: "infrastructure" },
+  { id: "pim", name: "Pimcore", category: "infrastructure" },
   { id: "cicd", name: "CI/CD", category: "infrastructure" },
   { id: "testing", name: "Testing", category: "quality" },
   { id: "security", name: "Security", category: "quality" },
