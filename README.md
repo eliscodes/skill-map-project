@@ -4,7 +4,7 @@ A visual team skill mapping tool for TLs.
 
 ## What it does
 
-SkillMap gives you a live overview of your team's skills: Who knows what, where the gaps are, and who can grow into what. No HR forms, no spreadsheets. Just a clean, interactive heatmap your team actually wants to use.
+SkillMap gives you a live overview of your team's skills: Who knows what, where the gaps are, and who can grow into what.
 
 ## Features
 
